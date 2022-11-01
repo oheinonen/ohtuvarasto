@@ -50,7 +50,7 @@ class TestVarasto(unittest.TestCase):
 
         saatu_maara = self.varasto.ota_varastosta(2)
 
-        self.assertAlmostEqual(saatu_maara, 2)
+        self.assertAlmostEqual(saatu_maara, 20)
 
     def test_negatiivinen_ottaminen_palauttaa_nolla(self):
         self.varasto.lisaa_varastoon(8)
