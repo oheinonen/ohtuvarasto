@@ -37,6 +37,7 @@ class TestVarasto(unittest.TestCase):
     def test_saldo_ei_ylita_tilavuutta(self):
         self.varasto.lisaa_varastoon(20)
 
+        # vapaata tilaa on vain 10, joten ylijäämää ei lisätä saldolle
         self.assertAlmostEqual(self.varasto.saldo, 10)
 
     def test_lisays_lisaa_pienentaa_vapaata_tilaa(self):
@@ -63,7 +64,7 @@ class TestVarasto(unittest.TestCase):
         self.varasto.lisaa_varastoon(8)
 
         saatu_maara = self.varasto.ota_varastosta(10)
-
+        
         self.assertAlmostEqual(saatu_maara, 8)
 
     def test_ottaminen_lisaa_tilaa(self):
