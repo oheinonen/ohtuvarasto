@@ -76,5 +76,5 @@ class TestVarasto(unittest.TestCase):
         self.assertEqual(self.varasto.paljonko_mahtuu(), 4)
 
     def test_str_funktio(self):
-        txt = self.varasto.__str__()
+        txt = str(self.varasto)
         self.assertEqual(txt,"saldo = 0, vielä tilaa 10" )
